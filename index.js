@@ -43,7 +43,9 @@ app.post("/login", (req, res) => {
       });
     }
     //요청된 이메일이 데이터 베이스에 있다면 비밀번호가 일치하는지 확인
-    user.comparePassword(req.body.password, (err, isMatch) => {});
+    user.comparePassword(req.body.password, (err, isMatch) => {
+        
+    });
   });
 
   //비밀번호까지 맞다면 토큰을 생성하기
