@@ -1,6 +1,6 @@
 const express = require("express");
 const app = express();
-const port = 5000;
+
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 const config = require("./config/key");
@@ -91,4 +91,10 @@ app.get("/api/users/logout", auth, (req, res) => {
   });
 });
 
+//test
+app.get("/api/hello", (req, res) => {
+  res.send("test입니다");
+});
+
+const port = 5000;
 app.listen(port, () => console.log(`Example app listening on port ${port}`));
